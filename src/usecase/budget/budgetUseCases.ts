@@ -1,4 +1,5 @@
 import {
+NewBudget,
   type Budget,
   type BudgetId,
   type BudgetSummary,
@@ -6,6 +7,7 @@ import {
 
 interface BudgetUseCases {
   // TODO 3.1 - add createBudget use case
+  createBudget: (newBudget: NewBudget) => Promise<Budget>
   /**
    * Gets the summary of a budget including all expenses
    * @param budgetId The ID of the budget to fetch
